@@ -1,0 +1,21 @@
+.options {
+    display: flex;
+    gap: 10px;
+    padding-left: 40px;
+}
+.optionsButton {
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+.optionsButton:hover {
+    background-color: #0056b3;
+  }
