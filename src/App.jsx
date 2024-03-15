@@ -29,7 +29,7 @@ const App = () => {
   };
 
   const totalFeedback = clicks.good + clicks.neutral + clicks.bad;
-  const totalFeedbackPercent = Math.round(
+  const positiveFeedbackPercentage = Math.round(
     ((clicks.good + clicks.neutral) / totalFeedback) * 100
   );
 
@@ -45,11 +45,11 @@ const App = () => {
         handleResetFeedback={handleResetFeedback}
         totalFeedback={totalFeedback}
       />
-      {clicks.good > 0 || clicks.neutral > 0 || clicks.bad > 0 ? (
+      {totalFeedback > 0 ? (
         <Feedback
           clicks={clicks}
           totalFeedback={totalFeedback}
-          totalFeedbackPercent={totalFeedbackPercent}
+          positiveFeedbackPercentage={positiveFeedbackPercentage}
         />
       ) : (
         <Notification />
